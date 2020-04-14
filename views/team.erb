@@ -5,8 +5,10 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
-
+    <% @roles = {name: "Team Name", coach: "Coach", pg: "Point Guard", sg: "Shooting Guard", pf: "Power Forward", sf: "Small Forward", c: "Center"} %>
+    <% @team.each do |role, name|%>
+        <h1><%= "#{@roles[role.to_sym]}: #{name}" %></h1>
+    <% end %>
 
  </body>
 </html>
